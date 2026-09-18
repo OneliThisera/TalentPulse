@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TalentPulse AI | Next-Gen Intelligent Job Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Navigation Header -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="brand" onclick="app.navigate('browse')">
+          <div class="brand-badge">⚡ Go + AI</div>
+          <div class="brand-name">Talent<span>Pulse</span></div>
+        </div>
+
+        <nav class="nav-links">
+          <button class="nav-btn active" id="nav-browse" onclick="app.navigate('browse')">Explore Jobs</button>
+          <button class="nav-btn" id="nav-post" onclick="app.navigate('post-job')">Post a Job (AI Assistant)</button>
+          <button class="nav-btn" id="nav-dashboard" onclick="app.navigate('dashboard')">Recruiter Pipeline</button>
+          <button class="nav-btn" id="nav-candidate-apps" onclick="app.navigate('my-apps')">My Applications</button>
+        </nav>
+
+        <div class="nav-auth" id="nav-auth-section">
+          <!-- Populated by JS: user profile or login/register buttons -->
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main-wrapper" id="main-content">
+      <!-- Dynamic Views rendered here -->
+    </main>
+
+    <!-- Global Modal for AI Match and Quick Apply -->
+    <div id="modal-container" class="modal-backdrop hidden">
+      <div class="modal-card" id="modal-content">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast-container" class="toast-container"></div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
